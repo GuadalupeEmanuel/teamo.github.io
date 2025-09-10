@@ -47,12 +47,7 @@
       animation: floatUp 10s linear infinite;
     }
     .heart:before,.heart:after{
-      content:'';
-      position:absolute;
-      width:20px;
-      height:20px;
-      background:var(--accent);
-      border-radius:50%;
+      content:'';position:absolute;width:20px;height:20px;background:var(--accent);border-radius:50%;
     }
     .heart:before{top:-10px;left:0}
     .heart:after{left:10px;top:0}
@@ -61,76 +56,29 @@
       10%{opacity:1}
       100%{transform:translateY(-120vh) scale(1.2) rotate(45deg);opacity:0}
     }
-    .envelope{
-      width:100%;
-      max-width:850px;
-      position:relative;
-      perspective:1500px;
-    }
+    .envelope{width:100%;max-width:850px;position:relative;perspective:1500px;}
     .flap{
-      position:absolute;
-      top:0;left:0;
-      width:100%;height:100%;
+      position:absolute;top:0;left:0;width:100%;height:100%;
       background:linear-gradient(135deg,#fff,#ffd6e0);
-      transform-origin:top;
-      transform:rotateX(0deg);
-      transition:1.5s ease;
-      z-index:2;
-      border-radius:20px 20px 0 0;
-      box-shadow:0 5px 20px rgba(0,0,0,0.15);
+      transform-origin:top;transform:rotateX(0deg);transition:1.5s ease;
+      z-index:2;border-radius:20px 20px 0 0;box-shadow:0 5px 20px rgba(0,0,0,0.15);
     }
-    .envelope.open .flap{
-      transform:rotateX(-180deg);
-    }
+    .envelope.open .flap{transform:rotateX(-180deg);}
     .card{
-      background:var(--card);
-      border-radius:30px;
-      padding:40px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-      backdrop-filter: blur(8px);
-      border:2px solid rgba(255,255,255,0.6);
-      transform:translateY(0);
-      transition:all 1s ease 1s;
-      opacity:0;
+      background:var(--card);border-radius:30px;padding:40px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+      backdrop-filter: blur(8px);border:2px solid rgba(255,255,255,0.6);
+      transform:translateY(0);transition:all 1s ease 1s;opacity:0;
     }
-    .envelope.open .card{
-      transform:translateY(-20px);
-      opacity:1;
-    }
+    .envelope.open .card{transform:translateY(-20px);opacity:1;}
     h1{
-      font-family:'Great Vibes',cursive;
-      font-size:46px;
-      text-align:center;
-      color:var(--accent);
-      margin-bottom:20px;
-      animation:pulse 2s infinite;
+      font-family:'Great Vibes',cursive;font-size:46px;text-align:center;
+      color:var(--accent);margin-bottom:20px;animation:pulse 2s infinite;
     }
-    @keyframes pulse{
-      0%,100%{transform:scale(1)}
-      50%{transform:scale(1.05)}
-    }
-    .letter{
-      font-size:18px;
-      line-height:1.8;
-      color:#333;
-      text-align:justify;
-    }
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+    .letter{font-size:18px;line-height:1.8;color:#333;text-align:justify;}
     .letter p{margin:16px 0}
-    footer{
-      margin-top:30px;
-      text-align:center;
-      font-family:'Great Vibes',cursive;
-      font-size:24px;
-      color:var(--accent);
-    }
-    .page-link{
-      display:block;
-      margin-top:10px;
-      font-size:16px;
-      font-family:'Quicksand', sans-serif;
-      color:#0366d6;
-      text-decoration:none;
-    }
+    footer{margin-top:30px;text-align:center;font-family:'Great Vibes',cursive;font-size:24px;color:var(--accent);}
   </style>
 </head>
 <body>
@@ -161,14 +109,15 @@
       </div>
       <footer>
         Tu príncipe ❤️  
-        <a class="page-link" href="https://GuadalupeEmanuel.github.io/teamo.github.io/" target="_blank">
-          👉 Abrir esta carta en la web
-        </a>
       </footer>
     </article>
   </div>
 
   <script>
+    // Tus datos de GitHub, guardados en variables (no se muestran en la web)
+    const usuario = "GuadalupeEmanuel";
+    const repo = "teamo.github.io";
+
     window.onload = ()=>{
       document.getElementById("envelope").classList.add("open");
     }
